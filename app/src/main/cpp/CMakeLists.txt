@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.18.1)
+project(capp)
+add_library(capp SHARED main.c raylib_stub.c)
+target_include_directories(capp PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(capp log android)
